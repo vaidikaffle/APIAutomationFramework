@@ -1,0 +1,28 @@
+{
+    "id": "357",
+    "first_name": "keenan",
+    "last_name": "franecki",
+    "email": "shivam@mailinator.com",
+    "jobs": [
+        "tester",
+        "trainer"
+    ],
+    "marks": [
+        {
+            "Hindi": 90,
+            "English": 80
+        },
+        {
+            "Hindi": 70,
+            "English": 60
+        }
+    ],
+    "favFoods": {
+        "breakfast": "idly",
+        "lunch": "rice",
+        "dinner": [
+            "chapati",
+            "milk"
+        ]
+    }
+}

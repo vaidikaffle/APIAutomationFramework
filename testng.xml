@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.learning.listeners.TestListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/home/vaidiksoni/IdeaProjects/APIAutomationFramework">
+        <classes>
+            <class name="com.learning.tests.DataProviderTest">
+                <methods>
+                    <include name="getEmployeeDetails"/>
+                </methods>
+            </class>
+            <class name="com.learning.tests.GetTests">
+                <methods>
+                    <include name="getEmployeesDetails"/>
+                    <include name="getEmployeeDetails"/>
+                </methods>
+            </class>
+            <class name="com.learning.tests.PostTest">
+                <methods>
+                    <include name="postCallTests"/>
+                    <include name="postRequestUsingExternalFile"/>
+                </methods>
+            </class>
+            <class name="com.learning.tests.AssignmentTests">
+                <methods>
+                    <include name="assignmentTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

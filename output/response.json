@@ -1,0 +1,28 @@
+{
+    "id": "851",
+    "first_name": "lucienne",
+    "last_name": "gleason",
+    "email": "shivam@mailinator.com",
+    "jobs": [
+        "tester",
+        "trainer"
+    ],
+    "marks": [
+        {
+            "Hindi": 90,
+            "English": 80
+        },
+        {
+            "Hindi": 70,
+            "English": 60
+        }
+    ],
+    "favFoods": {
+        "breakfast": "idly",
+        "lunch": "rice",
+        "dinner": [
+            "chapati",
+            "milk"
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "userID",
+  "first_name": "f_name",
+  "last_name": "l_name",
+  "email": "shivam@mailinator.com",
+  "jobs" : ["tester", "trainer"],
+  "marks": [
+    {
+      "Hindi": 90,
+      "English": 80
+    },
+    {
+      "Hindi": 70,
+      "English": 60
+    }
+  ],
+  "favFoods": {
+    "breakfast": "idly",
+    "lunch": "rice",
+    "dinner": ["chapati", "milk"]
+  }
+}
