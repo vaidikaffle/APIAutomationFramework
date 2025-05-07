@@ -14,7 +14,7 @@ public class DeleteRequest {
     @Test
     public void deleteEmployee(){
         RequestBuilders.buildRequestForDeleteCall()
-            .pathParam("id", 383)
+            .pathParam("id", 434)
             .delete("/employees/{id}");
 //        ExtentLogger.logResponse("Employee deleted successfully");
 }

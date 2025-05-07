@@ -28,7 +28,7 @@ public class AuthDemo {
     @Test
     public void getAllTheWorkspaces(){
         given()
-                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786")
+                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786_needToRemoveAtTheTimeOFExecution")
                 .log()
                 .all()
                 .get("https://api.getpostman.com/workspaces")
@@ -41,7 +41,7 @@ public class AuthDemo {
                 .replace("Sample Collection", "Sample Collection 001");
 
         Response response = given()
-                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786")
+                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786_needToRemoveAtTheTimeOFExecution")
                 .contentType(ContentType.JSON)
                 .log()
                 .all()
@@ -55,7 +55,7 @@ public class AuthDemo {
 
         //Delete the created collection
         given()
-                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786")
+                .header("X-API-Key", "PMAK-67d115e548cab30001b58121-0650b3c0cff6062725a413591619fab786_needToRemoveAtTheTimeOFExecution")
                 .log()
                 .all()
                 .delete("https://api.getpostman.com/collections/"+ collectionUid)
