@@ -35,7 +35,7 @@ pipeline {
 
   post {
          always {
-             mail to: 'your_email@example.com',
+             mail to: 'vaidik.soni@affle.com',
                   subject: "Jenkins Build (${JOB_NAME} - ${BUILD_NUMBER})",
                   body: """Build Status: ${currentBuild.result}
 
@@ -43,7 +43,7 @@ pipeline {
                   """
          }
          failure {
-             mail to: 'your_email@example.com',
+             mail to: 'vaidik.soni@affle.com',
                   subject: "Jenkins Build Failed (${JOB_NAME} - ${BUILD_NUMBER})",
                   body: """Build Status: FAILED
 
@@ -53,7 +53,7 @@ pipeline {
                   """
          }
          success {
-             mail to: 'your_email@example.com',
+             mail to: 'vaidik.soni@affle.com',
                   subject: "Jenkins Build Successful (${JOB_NAME} - ${BUILD_NUMBER})",
                   body: """Build Status: SUCCESS
 
@@ -63,7 +63,7 @@ pipeline {
                   """
          }
          unstable {
-             mail to: 'your_email@example.com',
+             mail to: 'vaidik.soni@affle.com',
                   subject: "Jenkins Build Unstable (${JOB_NAME} - ${BUILD_NUMBER})",
                   body: """Build Status: UNSTABLE
 
@@ -73,7 +73,7 @@ pipeline {
                   """
          }
          aborted {
-             mail to: 'your_email@example.com',
+             mail to: 'vaidik.soni@affle.com',
                   subject: "Jenkins Build Aborted (${JOB_NAME} - ${BUILD_NUMBER})",
                   body: """Build Status: ABORTED
 
