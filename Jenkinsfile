@@ -26,9 +26,7 @@ pipeline {
         }
         stage('Stop JSON Server') {
             steps {
-                steps {
                     sh 'kill $SERVER_PID'
-                }
             }
         }
     }
