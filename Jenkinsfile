@@ -33,34 +33,54 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            mail to: 'vaidik.soni@affle.com',
-                 subject: "Jenkins Build (${JOB_NAME} - ${BUILD_NUMBER})",
-                 body: """Build Status: ${BUILD_STATUS}
+  post {
+         always {
+             mail to: 'your_email@example.com',
+                  subject: "Jenkins Build (${JOB_NAME} - ${BUILD_NUMBER})",
+                  body: """Build Status: ${currentBuild.result}
 
-                 Check console output at ${BUILD_URL} to view the results.
-                 """
-        }
-        failure {
-            mail to: 'vaidik.soni@affle.com',
-                 subject: "Jenkins Build Failed (${JOB_NAME} - ${BUILD_NUMBER})",
-                 body: """Build Status: ${BUILD_STATUS}
+                  Check console output at ${BUILD_URL} to view the results.
+                  """
+         }
+         failure {
+             mail to: 'your_email@example.com',
+                  subject: "Jenkins Build Failed (${JOB_NAME} - ${BUILD_NUMBER})",
+                  body: """Build Status: FAILED
 
-                 The API automation tests have failed.
+                  The API automation tests have failed.
 
-                 Check console output at ${BUILD_URL} for details.
-                 """
-        }
-        success {
-            mail to: 'vaidik.soni@affle.com',
-                 subject: "Jenkins Build Successful (${JOB_NAME} - ${BUILD_NUMBER})",
-                 body: """Build Status: ${BUILD_STATUS}
+                  Check console output at ${BUILD_URL} for details.
+                  """
+         }
+         success {
+             mail to: 'your_email@example.com',
+                  subject: "Jenkins Build Successful (${JOB_NAME} - ${BUILD_NUMBER})",
+                  body: """Build Status: SUCCESS
 
-                 The API automation tests have passed successfully.
+                  The API automation tests have passed successfully.
 
-                 Check console output at ${BUILD_URL} for details.
-                 """
-        }
-    }
+                  Check console output at ${BUILD_URL} for details.
+                  """
+         }
+         unstable {
+             mail to: 'your_email@example.com',
+                  subject: "Jenkins Build Unstable (${JOB_NAME} - ${BUILD_NUMBER})",
+                  body: """Build Status: UNSTABLE
+
+                  The API automation tests have reported some unstable results.
+
+                  Check console output at ${BUILD_URL} for details.
+                  """
+         }
+         aborted {
+             mail to: 'your_email@example.com',
+                  subject: "Jenkins Build Aborted (${JOB_NAME} - ${BUILD_NUMBER})",
+                  body: """Build Status: ABORTED
+
+                  The Jenkins build was aborted.
+
+                  Check console output at ${BUILD_URL} for details.
+                  """
+         }
+     }
 }
