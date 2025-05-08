@@ -26,7 +26,20 @@ pipeline {
         }
         stage('Stop JSON Server') {
             steps {
-                    sh 'kill $SERVER_PID'
+                sh '''#!/bin/bash
+                echo "Stopping JSON Server..."
+                if [ -f json_server.pid ]; then
+                    SERVER_PID=$(cat json_server.pid)
+                    if ps -p $SERVER_PID > /dev/null; then
+                        kill $SERVER_PID
+                        echo "JSON Server with PID $SERVER_PID stopped."
+                    else
+                        echo "Process $SERVER_PID not running."
+                    fi
+                else
+                    echo "PID file not found. JSON Server may not have started properly."
+                fi
+                '''
             }
         }
     }
